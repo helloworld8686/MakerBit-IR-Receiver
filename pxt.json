@@ -1,6 +1,6 @@
 {
     "name": "new_IR",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "new_IR",
     "dependencies": {
         "core": "*",
