@@ -45,7 +45,7 @@ const enum IrButton {
   //% block="▼"
   Down = 0x4A,
   //% block=" "
-  Unused_4 = -4,
+  Unused_4 = -4
 }
 
 const enum IrButtonAction {
