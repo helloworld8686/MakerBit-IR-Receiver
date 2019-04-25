@@ -4,54 +4,54 @@
 
 const enum IrButton {
 
-  //% block=" 1 "
+  //% block="1" 
   Number_1 = 0xA2,
-  //% block=" 2 "
+  //% block="2"
   Number_2 = 0x62,
-  //% block=" 3 "
+  //% block="3"
   Number_3 = 0xE2,
-  //% block=" 4 "
+  //% block="4"
   Number_4 = 0x22,
-  //% block=" 5 "
+  //% block="5"
   Number_5 = 0x02,
-  //% block=" 6 "
+  //% block="6"
   Number_6 = 0xC2,
-  //% block=" 7 "
+  //% block="7"
   Number_7 = 0xE0,
-  //% block=" 8 "
+  //% block="8"
   Number_8 = 0xA8,
-  //% block=" 9 "
+  //% block="9"
   Number_9 = 0x90,
-  //% block=" * "
+  //% block="*"
   Star = 0x68,
-  //% block=" 0 "
+  //% block="0"
   Number_0 = 0x98,
-  //% block=" # "
+  //% block="#"
   Hash = 0xB0,
-    //% block="   "
+    //% block=" "
   Any = -1,
-  //% block=" ▲ "
+  //% block="▲"
   Up = 0x18,
-  //% block="   "
+  //% block=" "
   Unused_2 = -2,
-  //% block=" ◀ "
+  //% block="◀"
   Left = 0x10,
-  //% block="OK "
+  //% block="OK"
   Ok = 0x38,
-  //% block=" ▶ "
+  //% block="▶"
   Right = 0x5A,
-  //% block="   "
+  //% block=" "
   Unused_3 = -3,
-  //% block=" ▼ "
+  //% block="▼"
   Down = 0x4A,
-  //% block="   "
+  //% block=" "
   Unused_4 = -4
 }
 
 const enum IrButtonAction {
-  //% block="pressed"
+  //% block="按下"
   Pressed = 0,
-  //% block="released"
+  //% block="弹开"
   Released = 1
 }
 
@@ -190,7 +190,7 @@ namespace makerbit {
    */
   //% subcategory="IR Remote"
   //% blockId="makerbit_infrared_connect"
-  //% block="connect IR receiver at %pin"
+  //% block="设置遥控器引脚 %pin"
   //% pin.fieldEditor="gridpicker"
   //% pin.fieldOptions.columns=4
   //% pin.fieldOptions.tooltips="false"
@@ -291,7 +291,7 @@ namespace makerbit {
    */
   //% subcategory="IR Remote"
   //% blockId=makerbit_infrared_on_ir_button
-  //% block="on IR button | %button | %action"
+  //% block="当遥控器按键|%button|被|%action|时"
   //% button.fieldEditor="gridpicker"
   //% button.fieldOptions.columns=3
   //% button.fieldOptions.tooltips="false"
@@ -319,7 +319,7 @@ namespace makerbit {
    */
   //% subcategory="IR Remote"
   //% blockId=makerbit_infrared_button_pressed
-  //% block="IR button | %button | is pressed"
+  //% block="当遥控器按键 | %button | 被按下时"
   //% button.fieldEditor="gridpicker"
   //% button.fieldOptions.columns=3
   //% button.fieldOptions.tooltips="false"
@@ -333,7 +333,7 @@ namespace makerbit {
    */
   //% subcategory="IR Remote"
   //% blockId=makerbit_infrared_pressed_button
-  //% block="IR button"
+  //% block="遥控器编码值"
   //% weight=57
   export function pressedIrButton(): number {
     return irState.activeCommand;
@@ -348,7 +348,7 @@ namespace makerbit {
   //% button.fieldEditor="gridpicker"
   //% button.fieldOptions.columns=3
   //% button.fieldOptions.tooltips="false"
-  //% block="IR button %button"
+  //% block="遥控器按键| %button"
   //% weight=56
   export function irButton(button: IrButton): number {
     return button as number;
