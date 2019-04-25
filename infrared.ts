@@ -189,7 +189,7 @@ namespace makerbit {
    * Connects to the IR receiver module at the specified pin.
    * @param pin IR receiver pin, eg: DigitalPin.P0
    */
-  //% subcategory="IR Remote"
+  //% subcategory="遥控器"
   //% blockId="makerbit_infrared_connect"
   //% block="设置遥控器引脚 %pin"
   //% pin.fieldEditor="gridpicker"
@@ -290,7 +290,7 @@ namespace makerbit {
    * @param button the button to be checked
    * @param handler body code to run when event is raised
    */
-  //% subcategory="IR Remote"
+  //% subcategory="遥控器"
   //% blockId=makerbit_infrared_on_ir_button
   //% block="当遥控器按键|%button|被|%action|时"
   //% button.fieldEditor="gridpicker"
@@ -318,7 +318,7 @@ namespace makerbit {
    * Returns true if a specific remote button is currently pressed. False otherwise.
    * @param button the button to be checked
    */
-  //% subcategory="IR Remote"
+  //% subcategory="遥控器"
   //% blockId=makerbit_infrared_button_pressed
   //% block="当遥控器按键 | %button | 被按下时"
   //% button.fieldEditor="gridpicker"
@@ -332,7 +332,7 @@ namespace makerbit {
   /**
    * Returns the code of the IR button that is currently pressed and 0 if no button is pressed.
    */
-  //% subcategory="IR Remote"
+  //% subcategory="遥控器"
   //% blockId=makerbit_infrared_pressed_button
   //% block="遥控器编码值"
   //% weight=57
@@ -344,7 +344,7 @@ namespace makerbit {
    * Returns the command code of a specific IR button.
    * @param button the button
    */
-  //% subcategory="IR Remote"
+  //% subcategory="遥控器"
   //% blockId=makerbit_infrared_button
   //% button.fieldEditor="gridpicker"
   //% button.fieldOptions.columns=3
