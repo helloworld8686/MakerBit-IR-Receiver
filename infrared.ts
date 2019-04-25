@@ -48,6 +48,7 @@ const enum IrButton {
   Unused_4 = -4
 }
 
+
 const enum IrButtonAction {
   //% block="按下"
   Pressed = 0,
