@@ -90,7 +90,11 @@ namespace makerbit {
       this.inverseCommandBits = 0;
       this.state = NecIrState.DetectStartOrRepeat;
     }
-
+  /**
+   * 红外编码头检测：10000-12500为重复发送头码
+   *                12500-14500为正常发送头码     
+   * @param pulseToPulse 脉宽周期，微妙为单位
+   */
     detectStartOrRepeat(pulseToPulse: number): number {
       if (pulseToPulse < 10000) {
         return 0;
@@ -104,7 +108,10 @@ namespace makerbit {
         return 0;
       }
     }
-
+  /**
+   * 校验   
+   * @param 
+   */
     static calculateCommand(
       commandBits: number,
       inverseCommandBits: number,
@@ -122,6 +129,10 @@ namespace makerbit {
       }
     }
 
+  /**
+   * 接收到正确的脉宽后，往缓存中推一个BIT   
+   * @param 
+   */
     pushBit(bit: number): number {
       this.bitsReceived += 1;
 
@@ -144,6 +155,10 @@ namespace makerbit {
       return 0;
     }
 
+  /**
+   * 检测红外数据编码部分
+   * @param 
+   */
     detectBit(pulseToPulse: number): number {
       if (pulseToPulse < 1600) {
         // low bit
@@ -157,6 +172,10 @@ namespace makerbit {
       }
     }
 
+  /**
+   * 检测整体的红外编码  
+   * @param 
+   */
     pushMarkSpace(markAndSpace: number): number {
       switch (this.state) {
         case NecIrState.DetectStartOrRepeat:
@@ -169,6 +188,10 @@ namespace makerbit {
     }
   }
 
+  /**
+   * IO口检测到电压变化时，记录下脉宽周期，当完成一次高低变化时，触发一次 MICROBIT_MAKERBIT_IR_MARK_SPACE 事件，并且把高低变化的时间推送给事件
+   * @param 
+   */
   function enableIrMarkSpaceDetection(pin: DigitalPin) {
     let mark = 0;
     let space = 0;
